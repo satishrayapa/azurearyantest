@@ -1,6 +1,6 @@
 jobs:
   - template: process.yml
-    parameters:
-      pool:   # this parameter is called `pool`
+    #parameters:
+      #pool:   # this parameter is called `pool`
         vmImage: ubuntu-latest  # and it's a mapping rather than a string
         #vmImage: ubuntu-latest  # and it's a mapping rather than a string
