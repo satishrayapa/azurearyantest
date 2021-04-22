@@ -1,7 +1,7 @@
 parameters:
 - name: 'pool'
   type: object
-  default: {"vmImage: ubuntu-latest","vmImage: Ubuntu 20.04"}
+  default: {"vmImage: ubuntu-latest","vmImage: windows-latest"}
 
 jobs:
 - job: build
