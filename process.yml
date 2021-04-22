@@ -1,0 +1,8 @@
+parameters:
+- name: 'pool'
+  type: object
+  default: {}
+
+jobs:
+- job: build
+  pool: ${{ parameters.pool }}

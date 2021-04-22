@@ -1,13 +1,6 @@
-# File: azure-pipelines.yml
-trigger:
-  - main
-  
-extends:
-  template: start.yml
-  parameters:
-    buildSteps:  
-      - bash: echo Test #Passes
-        displayName: succeed
-      - bash: echo "Test"
-        displayName: succeed
-      
+jobs:
+  - template: process.yml
+    parameters:
+      pool:   # this parameter is called `pool`
+        vmImage: ubuntu-latest  # and it's a mapping rather than a string
+        vmImage: ubuntu-latest  # and it's a mapping rather than a string
