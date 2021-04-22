@@ -6,3 +6,6 @@ parameters:
 jobs:
 - job: build
   pool: ${{ parameters.pool }}
+  steps:
+    ${{ each project in parameters.pool }}:
+      - script: echo My favorite vegetable is ${{ parameters.pool }}.
