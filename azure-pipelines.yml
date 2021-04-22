@@ -3,4 +3,4 @@ jobs:
     parameters:
       pool:   # this parameter is called `pool`
         vmImage: ubuntu-latest  # and it's a mapping rather than a string
-        vmImage: ubuntu-latest  # and it's a mapping rather than a string
+        #vmImage: ubuntu-latest  # and it's a mapping rather than a string
