@@ -1,5 +1,5 @@
 parameters:
-  pool:["ubuntu-latest","windows-latest"]
+  pool: ["ubuntu-latest","windows-latest"]
 # - name: 'pool'
 #   type: object
 #   default: {"ubuntu-latest","windows-latest"}
