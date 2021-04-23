@@ -7,10 +7,13 @@
 
 pool:
   vmImage: 'ubuntu-latest'
+variables:
+  - group: partnerid-variables-test
+
 steps:
   - template: process.yml
     parameters:
-      clientname: ["client1", "client2"]
+      clientname: [$(partnerid)]
 
 #variables:
   #- group: partnerid-variables-test
