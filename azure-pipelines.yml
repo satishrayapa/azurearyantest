@@ -7,14 +7,17 @@
 
 pool:
   vmImage: 'ubuntu-latest'
-
+steps:
+  - template: process.yml
+    parameters:
+      clientname: ["client1", "client2"]
 
 #variables:
   #- group: partnerid-variables-test
-variables:
-    name: colin
-steps:
-  - script: echo "Hello, $(name)!"
+# variables:
+#     name: colin
+# steps:
+#   - script: echo "Hello, $(name)!"
 # jobs:
 # - job: GetpartneridsJob
 #   steps:
