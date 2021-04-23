@@ -1,20 +1,95 @@
-parameters:
-- name: image
-  displayName: Pool Image
-  type: string
-  default: ubuntu-latest
-  values:
-  - windows-latest
-  - ubuntu-latest
+# # .NET Desktop
+# # Build and run tests for .NET Desktop or Windows classic desktop solutions.
+# # Add steps that publish symbols, save build artifacts, and more:
+# # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+
+
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+#variables:
+  #- group: partnerid-variables-test
+variables:
+    name: colin
+steps:
+  - script: echo "Hello, $(name)!"
+# jobs:
+# - job: GetpartneridsJob
+#   steps:
+#   - task: PowerShell@2
+#     name: PartneridStask
+#     displayName: 'Configure variables to be used throughout the build pipeline (this yaml script).'
+#     inputs:
+#       targetType: 'filePath'    
+#       filePath: 'Database/aws-partner-create-test-test.ps1'
+#       arguments: -server $(sql.server)
+#       errorActionPreference: 'stop'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# parameters:
+# - name: doThing
+#   default: true
+#   type: boolean
+
+# steps:
+# - script: echo I did a thing
+#   condition: and(succeeded(), eq('${{ parameters.doThing }}', true))
+
+
+
+
+
+# parameters:
+# - name: image
+#   displayName: Pool Image
+#   type: string
+#   default: ubuntu-latest
+#   values:
+#   - windows-latest
+#   - ubuntu-latest
   
 
   
-trigger: none
+# trigger: none
   
-jobs:
-- job: build
-  displayName: build
-  pool: 
-    vmImage: ${{ parameters.image }}
-  steps:
-  - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
+# jobs:
+# - job: build
+#   displayName: build
+#   pool: 
+#     vmImage: ${{ parameters.image }}
+#   steps:
+#   - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
