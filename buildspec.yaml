@@ -1,13 +1,19 @@
 version: 0.2
 
 phases:
-  build:
-    commands:
-      - mkdir build-output
-  post_build:
-    commands:
-      - mkdir build-input
+  install: 
+    runtime-versions:
+      nodejs: 12
+    commands: 
+      - npm --version  
+    build:
+      commands:
+        - mkdir build-output
+        - pwd
+    post_build:
+      commands:
+        - mkdir build-input
 
-artifacts:
-  files:
-    - '**/*'
+    artifacts:
+      files:
+        - '**/*'
