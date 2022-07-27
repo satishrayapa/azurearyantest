@@ -6,6 +6,7 @@ phases:
       nodejs: 12
     commands: 
       - npm --version  
+      - pwd
     build:
       commands:
         - mkdir build-output
@@ -14,6 +15,6 @@ phases:
       commands:
         - mkdir build-input
 
-    artifacts:
-      files:
-        - '**/*'
+artifacts:
+  files:
+    - '**/*'
