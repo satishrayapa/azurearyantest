@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - mkdir build-output
+  post_build:
+    commands:
+      - mkdir build-input
+
+artifacts:
+  files:
+    - '**/*'
