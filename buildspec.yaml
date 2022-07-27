@@ -11,6 +11,7 @@ phases:
       commands:
         - mkdir build-output
         - pwd
+        - ls
     post_build:
       commands:
         - mkdir build-input
