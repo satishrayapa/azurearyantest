@@ -7,10 +7,12 @@ phases:
     commands: 
       - npm --version  
       - git --version
+      - git clone https://sathishkakarlapudi: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@github.com/tr/ogt-mobile_cloud-bridge.git
     build:
       commands:
         - mkdir build-output
         - pwd
+        
         - aws s3 sync . s3://a205822-data-management-infra-cicd-bucket-use1/a205822-mobile-project-codebuild-test-poc/
 
        
