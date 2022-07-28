@@ -7,7 +7,6 @@ phases:
     commands: 
       - npm --version  
       - git --version
-      - git clone https://sathishkakarlapudi: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@github.com/tr/ogt-mobile_cloud-bridge.git
     build:
       commands:
         - mkdir build-output
