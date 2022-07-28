@@ -1,0 +1,48 @@
+{
+  "name": "cloud-bridge-infrastructure",
+  "description": "Cloud Bridge for OSGT.",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Average Digital <dev@average.com.br>",
+  "bin": {
+    "infrastructure": "bin/infrastructure.js"
+  },
+  "scripts": {
+    "deploy": "cdk deploy --require-approval any-change",
+    "aws-deploy": "aws cloudformation deploy --template-file cdk.out/otm-mobile-cloud-bridge-development.template.json --s3-bucket a207914-otm-mobile-cloud-bridge-pre-production --stack-name a207914-otm-mobile-cloud-bridge-development --capabilities CAPABILITY_NAMED_IAM --profile tr-integrationpoint-preprod",
+    "aws-deploy-secondary": "aws cloudformation deploy --template-file cdk.out/otm-mobile-cloud-bridge-development.template.json --s3-bucket a207914-otm-mobile-cloud-bridge-development-eu-central-1 --stack-name a207914-otm-mobile-cloud-bridge-development --capabilities CAPABILITY_NAMED_IAM --profile tr-integrationpoint-preprod",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.97.0",
+    "@aws-cdk/aws-s3-assets": "^1.100.0",
+    "@aws-cdk/aws-s3-deployment": "^1.100.0",
+    "@types/adm-zip": "^0.4.34",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "10.17.27",
+    "@types/source-map-support": "^0.5.3",
+    "aws-cdk": "1.97.0",
+    "aws-sdk": "^2.831.0",
+    "esbuild": "0",
+    "eslint": "^7.24.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2": "^1.97.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.97.0",
+    "@aws-cdk/aws-dynamodb": "^1.97.0",
+    "@aws-cdk/aws-iam": "^1.97.0",
+    "@aws-cdk/aws-lambda": "^1.97.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.97.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.97.0",
+    "@aws-cdk/aws-s3": "^1.97.0",
+    "@aws-cdk/core": "1.97.0",
+    "@mrgrain/cdk-esbuild": "^1.99.0",
+    "adm-zip": "^0.5.5",
+    "dotenv": "^8.2.0",
+    "source-map-support": "^0.5.16"
+  }
+}
